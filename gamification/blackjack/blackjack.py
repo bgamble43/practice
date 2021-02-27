@@ -110,7 +110,11 @@ print_player(player_cards, player_total)
 print("-----------------------")
 print("------ YOUR TURN ------")
 print("-----------------------")
-proceed = True
+if player_total == 21:
+  print("Blackjack!")
+  proceed = False
+else:
+  proceed = True
 while proceed == True:
   # If player is dealt 21 move to dealer sequence
   if player_total != 21:
